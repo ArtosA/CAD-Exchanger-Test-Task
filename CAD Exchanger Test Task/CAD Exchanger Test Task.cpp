@@ -29,6 +29,8 @@ public:
     Circle(double x, double y, double z, double radius)
         : centerX(x), centerY(y), centerZ(z), r(radius) {}
 
+    ~Circle() {}
+
     double radius() const override {
         return r;
     }
@@ -71,6 +73,8 @@ public:
     Ellipse(double x, double y, double z, double semiMajorAxis, double semiMinorAxis)
         : centerX(x), centerY(y), centerZ(z), a(semiMajorAxis), b(semiMinorAxis) {}
 
+    ~Ellipse() {}
+
     double radius() const override {
         return (a + b) / 2;
     }
@@ -112,6 +116,8 @@ private:
 public:
     Spiral(double x, double y, double z, double semiMajorAxis, double semiMinorAxis)
         : centerX(x), centerY(y), centerZ(z), a(semiMajorAxis), b(semiMinorAxis) {}
+
+    ~Spiral() {}
 
     double radius() const override {
         return (a + b) / 2;
